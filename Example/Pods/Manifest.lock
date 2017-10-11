@@ -26,42 +26,42 @@ PODS:
   - DSZKit/Core (0.1.0)
   - DSZKit/Tools (0.1.0):
     - SDWebImage
-  - Masonry (1.0.2)
+  - Masonry (1.1.0)
   - MJExtension (3.0.13)
-  - MJRefresh (3.1.12)
+  - MJRefresh (3.1.13)
   - ReactiveObjC (3.0.0)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
-  - SVProgressHUD (2.1.2)
+  - SVProgressHUD (2.2.1)
   - UITableView+FDTemplateLayoutCell (1.6)
 
 DEPENDENCIES:
-  - DSZKit/Base (from `https://github.com/DSZ911226/DSZKit.git`, branch `master`)
-  - DSZKit/Core (from `https://github.com/DSZ911226/DSZKit.git`, branch `master`)
-  - DSZKit/Tools (from `https://github.com/DSZ911226/DSZKit.git`, branch `master`)
+  - DSZKit/Base (from `https://github.com/DSZ911226/DSZKit2.git`, branch `master`)
+  - DSZKit/Core (from `https://github.com/DSZ911226/DSZKit2.git`, branch `master`)
+  - DSZKit/Tools (from `https://github.com/DSZ911226/DSZKit2.git`, branch `master`)
 
 EXTERNAL SOURCES:
   DSZKit:
     :branch: master
-    :git: https://github.com/DSZ911226/DSZKit.git
+    :git: https://github.com/DSZ911226/DSZKit2.git
 
 CHECKOUT OPTIONS:
   DSZKit:
-    :commit: 6787f5cf4fb49cf8db84a8a3210bfd8353468390
-    :git: https://github.com/DSZ911226/DSZKit.git
+    :commit: 59fc4734fe86ced9a9a1c0fa42f07c68c26beb06
+    :git: https://github.com/DSZ911226/DSZKit2.git
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   DSZKit: a04fde01987f1403ff0a6543150df2c3343f20e0
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MJRefresh: 56a28aa628c9895e97a518dabaecf70b18f92f32
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
-PODFILE CHECKSUM: d86bf66ac26981722e07e0b6d5c6c2d2f3bdfa83
+PODFILE CHECKSUM: 0bb9549b194a75dfd467fb014e6766a3688d64f0
 
 COCOAPODS: 1.2.1
