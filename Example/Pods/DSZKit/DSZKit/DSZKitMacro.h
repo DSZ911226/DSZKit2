@@ -109,9 +109,9 @@
 
 #pragma mark - 断言宏
 #ifdef DEBUG
-#define	DAssert(x) if(!(x)) {int a=1; int b=0;int c=a/b; c++;}
+#define    DAssert(x) if(!(x)) {int a=1; int b=0;int c=a/b; c++;}
 #else
-#define	DAssert(x) if(!(x)) {}
+#define    DAssert(x) if(!(x)) {}
 #endif
 
 #pragma mark - 对字符串做特殊的宏，即保证返回的值不为空
@@ -141,7 +141,7 @@
 // 此方法类似于swift中defer
 // 作用是可以在生命结束时，回调此方法。 http://blog.sunnyxx.com/2014/09/15/objc-attribute-cleanup/
 #define onExit\
-    __strong void(^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^
+__strong void(^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^
 
 /**
  Synthsize a dynamic object property in @implementation scope.
