@@ -7,9 +7,9 @@
 //
 
 #import <DSZKit/DSZKit.h>
-#import "DSZKitMacro.h"
+#import "DSZBaseModel.h"
 #import <ReactiveObjC/ReactiveObjC.h>
-@interface Firstmodel : DSZBaseViewModel
+@interface Firstmodel : DSZBaseModel
 @property(nonatomic,copy)NSString *name;
 
 + (RACSignal *)buzhidao;

@@ -7,7 +7,7 @@
 //
 
 #import <DSZKit/DSZKit.h>
-#import "DSZTableViewController.h"
+#import "DSZBaseTableViewController.h"
 
 @interface FirstTableVIewController : DSZTableViewController
 
