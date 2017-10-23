@@ -6,10 +6,10 @@ install! 'cocoapods', :deterministic_uuids => false
 
 target ‘Demo’ do
 
-    pod "DSZKit",
-   :git => "https://github.com/DSZ911226/DSZKit2.git",
-   :subspecs =>  ['Core','Base', 'Tools'],
-   :branch => "master"
+#    pod "DSZKit",
+#   :git => "https://github.com/DSZ911226/DSZKit2.git",
+#   :subspecs =>  ['Core','Base', 'Tools'],
+#   :branch => "master"
 
 
 
