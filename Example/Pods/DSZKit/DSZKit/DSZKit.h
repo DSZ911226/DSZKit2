@@ -46,7 +46,6 @@
 #import "DSZRootNavigationController.h"
 #import "DSZTextField.h"
 #import <ReactiveObjC/ReactiveObjC.h>
-#import "DSZBaseViewModel.h"
 
 
 #endif /* DSZKit_h */

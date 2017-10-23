@@ -48,7 +48,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   DSZKit:
-    :commit: 59fc4734fe86ced9a9a1c0fa42f07c68c26beb06
+    :commit: 0dfa94ba1bc56eceaeaa9bd2b30c1ccada59a5ce
     :git: https://github.com/DSZ911226/DSZKit2.git
 
 SPEC CHECKSUMS:

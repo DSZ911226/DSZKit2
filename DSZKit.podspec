@@ -46,6 +46,7 @@ Pod::Spec.new do |s|
   t.dependency 'SVProgressHUD'
   t.dependency 'ReactiveObjC', '~> 3.0.0'
   t.dependency 'AFNetworking', '~> 3.0.4'
+  t.dependency 'JSONModel', '~> 1.7.0'
   t.dependency 'DSZKit/Core'
   end
 
