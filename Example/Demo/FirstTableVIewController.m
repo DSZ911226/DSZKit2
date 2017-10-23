@@ -37,7 +37,10 @@
 }
 
 #pragma mark - 重写父类方法
-
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
 - (void)dszGetNetWork {
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"BusinessManage" ofType:@"json"];
     NSData *data=[NSData dataWithContentsOfFile:jsonPath];

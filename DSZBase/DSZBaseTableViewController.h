@@ -13,6 +13,10 @@
 @property(nonatomic,assign)NSInteger pageIndex;
 @property(nonatomic,strong)NSMutableArray *dataSource;
 
+/**
+ 设置tableView的样式
+ */
+@property(nonatomic,assign)UITableViewStyle tableViewStyle;
 
 /**
  下啦刷新

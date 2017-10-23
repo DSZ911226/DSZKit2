@@ -20,15 +20,39 @@
     [self loadTableView];
     [self regiserCell];
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.tableView.backgroundColor = [UIColor redColor];
 }
 
+
+
+/**
+ 懒加载
+
+ @return tableView默认为Plain
+ */
+- (DSZBaseTableView *)tableView{
+
+    if (!_tableView) {
+        if (self.tableViewStyle == UITableViewStylePlain) {
+            _tableView = [[DSZBaseTableView alloc]initWithFrame:self.view.bounds style:(UITableViewStylePlain)];
+        }else{
+            _tableView = [[DSZBaseTableView alloc]initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
+            _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0.001, 0.001)];
+        }
+    }
+    return _tableView;
+}
+
+-(void)setTableViewStyle:(UITableViewStyle)tableViewStyle{
+    _tableViewStyle = tableViewStyle;
+}
+
+
 - (void)loadTableView {
-    _tableView = [[DSZBaseTableView alloc]initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.frame = CGRectMake(0, 0, DSZScreenWidth, DSZViewHeight);
-    [self.view addSubview:_tableView];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.frame = CGRectMake(0, NavigationBarAndStatusHeight, DSZScreenWidth, DSZViewHeight);
+    [self.view addSubview:self.tableView];
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.showsHorizontalScrollIndicator = NO;
 }
@@ -92,7 +116,11 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [UIView new];
+    
+    UILabel *label = [UILabel new];
+    label.text = @"3fsdfsdfsdf";
+    label.backgroundColor = [UIColor greenColor];
+    return label;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
@@ -105,7 +133,7 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 0.001;
+    return 20;
 }
 
 - (void)addHeaderRefresh {
