@@ -11,6 +11,6 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 @interface Firstmodel : DSZBaseModel
 @property(nonatomic,copy)NSString *name;
-
+@property(nonatomic,copy)NSString *ID;
 + (RACSignal *)buzhidao;
 @end

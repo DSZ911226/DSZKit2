@@ -51,7 +51,7 @@
 #define DSZScreenBounds [UIScreen mainScreen].bounds
 #define DSZScreenWidth DSZScreenBounds.size.width
 #define DSZScreenHeight DSZScreenBounds.size.height
-#define DSZViewHeight (CGRectGetHeight(DSZScreenBounds) == 812? CGRectGetHeight(DSZScreenBounds) - 44 - 20 :CGRectGetHeight(DSZScreenBounds) - 44 - 40 - 34)
+#define DSZViewHeight (CGRectGetHeight(DSZScreenBounds) == 812? CGRectGetHeight(DSZScreenBounds) - 44 - 20 :CGRectGetHeight(DSZScreenBounds) - 44 - 20 - 34)
 
 
 #define UINavigationBarHidden [self.navigationController setNavigationBarHidden:YES animated:YES];

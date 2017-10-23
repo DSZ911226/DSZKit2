@@ -14,11 +14,6 @@
 @property(nonatomic,strong)NSMutableArray *dataSource;
 
 
-
-
-
-
-
 /**
  下啦刷新
  */
@@ -40,4 +35,27 @@
  */
 - (void)dszGetNetWork;
 
+/**
+ 刷新tableView
+ */
+- (void)reloadTableView;
+
+
+/**
+ 注册cell
+ */
+- (void)regiserCell;
+/**
+ 注册cell
+
+ @param classNames 需要注册的cell类名称数组
+ */
+- (void)regiserCellWithClassName:(NSArray *)classNames;
+
+/**
+ 注册cell
+
+ @param classNames 需要注册的cell的xib类名称
+ */
+- (void)regiserCellWithNibClassName:(NSArray *)classNames;
 @end

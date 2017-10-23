@@ -29,9 +29,10 @@
 }
 - (IBAction)btnAction:(id)sender {
     
-    //
+    
     FirstTableVIewController *VC = [FirstTableVIewController new];
-    [self presentViewController:VC animated:YES completion:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:VC];
+    [self presentViewController:nav animated:YES completion:nil];
     
 }
 

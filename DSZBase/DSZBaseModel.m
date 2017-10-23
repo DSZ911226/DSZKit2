@@ -8,20 +8,18 @@
 
 #import "DSZBaseModel.h"
 #import <DSZKitMacro.h>
+#import <MJExtension.h>
 @implementation DSZBaseModel
-+(JSONKeyMapper *)keyMapper{
-    return [[JSONKeyMapper alloc]initWithDictionary:@{@"id":@"ID",@"description":@"m_description"}];
-}
-+ (BOOL)propertyIsOptional:(NSString *)propertyName{
-    return YES;
-}
 
--(BOOL)hasNoError
+
+/**
+     MJExtension  function
+
+ @return 需要替换的字段
+ */
++ (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    if ([self.resultcode intValue] != 200) {
-        return NO;
-    }
-    return YES;
+    return @{@"ID": @"id"};
 }
 - (instancetype)init {
     self = [super init];

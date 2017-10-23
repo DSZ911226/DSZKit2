@@ -6,16 +6,9 @@
 //  Copyright © 2017年 zjwist. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+#import <DSZKit/DSZKit.h>
 
-@interface DSZBaseModel : JSONModel
-@property (nonatomic, strong)NSString *resultcode;
-
-@property (nonatomic, strong)NSString *reason;
-
--(BOOL)hasNoError;
-
-
+@interface DSZBaseModel : NSObject
 /**
  子类需要重写的方法
  */

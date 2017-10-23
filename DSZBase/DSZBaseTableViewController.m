@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadTableView];
+    [self regiserCell];
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
@@ -26,10 +27,36 @@
     _tableView = [[DSZBaseTableView alloc]initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.frame = CGRectMake(0, 0, , <#CGFloat height#>)
+    _tableView.frame = CGRectMake(0, 0, DSZScreenWidth, DSZViewHeight);
     [self.view addSubview:_tableView];
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.showsHorizontalScrollIndicator = NO;
+}
+
+
+
+- (void)regiserCell {
+    
+    DAssert(0)
+    NSLog(@"子类必须重写");
+    
+}
+
+
+/**
+ 注册cell
+ 
+ @param classNames 需要注册的cell名称数组
+ */
+- (void)regiserCellWithClassName:(NSArray *)classNames {
+    for (NSString *identify in classNames) {
+        [self.tableView registerClass:[NSClassFromString(identify) class] forCellReuseIdentifier:identify];
+    }
+}
+- (void)regiserCellWithNibClassName:(NSArray *)classNames {
+    for (NSString *identify in classNames) {
+        [self.tableView registerNib:[UINib nibWithNibName:identify bundle:nil] forCellReuseIdentifier:identify];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,11 +67,11 @@
 #pragma mark - tableView代理
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 0;
+    return self.dataSource.count >0?1:0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return self.dataSource.count;
 }
 
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -112,6 +139,11 @@
 {
     _pageIndex ++;
     [self dszGetNetWork];
+}
+
+
+- (void)reloadTableView {
+    [self.tableView reloadData];
 }
 
 - (void)dszGetNetWork {

@@ -9,6 +9,6 @@
 #import <DSZKit/DSZKit.h>
 #import "DSZBaseTableViewController.h"
 
-@interface FirstTableVIewController : DSZTableViewController
+@interface FirstTableVIewController : DSZBaseTableViewController
 
 @end

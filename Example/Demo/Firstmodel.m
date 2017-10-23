@@ -7,9 +7,9 @@
 //
 
 #import "Firstmodel.h"
+#import <MJExtension.h>
 @implementation Firstmodel
-- (void)DSZ_init {
-    
+- (void)dsz_init {
 }
 
 + (RACSignal *)buzhidao {
