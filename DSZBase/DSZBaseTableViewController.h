@@ -11,7 +11,9 @@
 @interface DSZBaseTableViewController : DSZBaseViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)DSZBaseTableView *tableView;
 @property(nonatomic,assign)NSInteger pageIndex;
-@property(nonatomic,strong)NSMutableArray *dataSource;
+@property(nonatomic,strong)NSMutableArray *dataSource;//数据源
+@property(nonatomic,assign)BOOL hasNextPage;//是否有下一页
+
 
 /**
  设置tableView的样式
@@ -62,4 +64,22 @@
  @param classNames 需要注册的cell的xib类名称
  */
 - (void)regiserCellWithNibClassName:(NSArray *)classNames;
+
+
+/**
+ *  替换无数据时显示的View
+ *
+ *  @param view 自定义View
+ */
+- (void)changeEmptyView:(UIView *)view;
+
+/**
+ *  设置无数据时显示的Viewframe
+ */
+- (void)resetEmptyViewFrame:(CGRect)frame;
+
+/**
+ *  设置无数据时显示的Viewframe
+ */
+- (void)setEmptyViewHidden;
 @end

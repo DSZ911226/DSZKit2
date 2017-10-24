@@ -51,9 +51,17 @@
     NSArray *array = jsonObject;
     self.dataSource = [Firstmodel mj_objectArrayWithKeyValuesArray:array];    
     [self endRefresh];
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    
     [self reloadTableView];
-    
-    
 }
 
 - (void)regiserCell {
