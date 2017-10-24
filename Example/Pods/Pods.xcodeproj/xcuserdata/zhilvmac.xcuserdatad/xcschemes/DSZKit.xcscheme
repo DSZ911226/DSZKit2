@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CD8DBA230B4F977CF35C0525'
+               BlueprintIdentifier = 'C0FB9D1BC311A2935DDC85C3'
                BlueprintName = 'DSZKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libDSZKit.a'>
