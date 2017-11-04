@@ -1,15 +1,14 @@
 //
-//  DSZBaseTableViewController.h
-//  Demo
+//  DSZBaseCollectionViewController.h
+//  AFNetworking
 //
-//  Created by zhilvmac on 2017/10/23.
-//  Copyright © 2017年 zjwist. All rights reserved.
+//  Created by zhilvmac on 2017/11/4.
 //
 
 #import "DSZBaseViewController.h"
-#import "DSZBaseTableView.h"
-@interface DSZBaseTableViewController : DSZBaseViewController<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong)DSZBaseTableView *tableView;
+
+@interface DSZBaseCollectionViewController : DSZBaseViewController<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (nonatomic, strong)UICollectionView *collectionView;
 @property(nonatomic,assign)NSInteger pageIndex;
 @property(nonatomic,strong)NSMutableArray *dataSource;//数据源
 @property(nonatomic,assign)BOOL hasNextPage;//是否有下一页
@@ -44,7 +43,7 @@
 /**
  刷新tableView
  */
-- (void)reloadTableView;
+- (void)reloadCollectionView;
 
 
 /**
@@ -53,14 +52,14 @@
 - (void)regiserCell;
 /**
  注册cell
-
+ 
  @param classNames 需要注册的cell类名称数组
  */
 - (void)regiserCellWithClassName:(NSArray *)classNames;
 
 /**
  注册cell
-
+ 
  @param classNames 需要注册的cell的xib类名称
  */
 - (void)regiserCellWithNibClassName:(NSArray *)classNames;
@@ -82,4 +81,9 @@
  *  设置无数据时显示的Viewframe
  */
 - (void)setEmptyViewHidden;
+
+/**
+ 增加移动cell交换
+ */
+- (void)addChangeCell;
 @end

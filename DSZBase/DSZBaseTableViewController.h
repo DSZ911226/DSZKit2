@@ -82,4 +82,9 @@
  *  设置无数据时显示的Viewframe
  */
 - (void)setEmptyViewHidden;
+
+/**
+ 增加移动cell交换
+ */
+- (void)addChangeCell;
 @end
