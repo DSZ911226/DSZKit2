@@ -28,12 +28,7 @@
     
 }
 
-- (NSMutableArray *)dataSource{
-    if (!_dataSource) {
-        _dataSource = [NSMutableArray array];
-    }
-    return _dataSource;
-}
+
 
 /**
  懒加载

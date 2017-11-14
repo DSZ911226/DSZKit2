@@ -65,13 +65,29 @@
 #pragma mark controller
 
 @interface DSZMultipleSelectViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property(nonatomic,copy)NSString *key;//判断是否相等的key
-@property(nonatomic,copy)NSString *namekey;//名称的key
-@property(nonatomic,assign)BOOL isMutipleSelect;//是否可以多选 yes是 no 不是
-
-
-@property(nonatomic,assign)NSInteger maxSelectedNum;//最多要选的数量 默认为100
-@property(nonatomic,assign)NSInteger minSelectedNum;//最少要选的数量 默认为0
+/**
+ 判断是否相等的key
+ */
+/**
+ 唯一的那个key
+ */
+@property(nonatomic,copy)NSString *key;
+/**
+ 名称的key
+ */
+@property(nonatomic,copy)NSString *namekey;
+/**
+ 是否可以多选 yes是 no 不是
+ */
+@property(nonatomic,assign)BOOL isMutipleSelect;
+/**
+ 最多要选的数量 默认为100
+ */
+@property(nonatomic,assign)NSInteger maxSelectedNum;
+/**
+ 最少要选的数量 默认为0
+ */
+@property(nonatomic,assign)NSInteger minSelectedNum;
 
 @end
 
@@ -162,7 +178,6 @@
     cell.name.text = [model valueForKey:self.namekey];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.btn.selected = [self.currentSelecteds containsObject:[model valueForKey:self.key]];
-       
     return cell;
 }
 
@@ -173,11 +188,8 @@
             if (self.currentSelecteds.count > self.minSelectedNum) {
                 [self.currentSelecteds removeObject:[model valueForKey:self.key]];
             }
-            
-            
         }else{
             if (self.currentSelecteds.count < self.maxSelectedNum) {
-            
             [self.currentSelecteds addObject:[model valueForKey:self.key]];
         }
         }
@@ -199,8 +211,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-
 
 @end
 
